@@ -1,0 +1,10 @@
+--- #YAML:1.0
+module_name: Algorithm-MedianSelect
+dist_version_from: lib/Algorithm/MedianSelect.pm
+installdirs: site
+requires:
+    Exporter: 0 
+distribution_type: module
+license: perl
+dist_abstract: median finding algorithm.
+dist_author: Steven Schubiger
