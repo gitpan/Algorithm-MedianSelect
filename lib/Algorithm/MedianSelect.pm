@@ -1,6 +1,6 @@
 package Algorithm::MedianSelect;
 
-$VERSION = '0.07';
+$VERSION = '0.08';
 @EXPORT_OK = qw(median);
 
 use strict 'vars';
@@ -76,6 +76,10 @@ are evaluated by their length. Mixed types are unsupported.
 Returns the median item.
 
  $median = median( @items );
+ 
+=head1 EXPORT
+
+median() is exportable.
 
 =head1 SEE ALSO
 

@@ -1,5 +1,8 @@
 Revision history for Perl extension Algorithm::MedianSelect.
 
+0.08 2005/02/15
+ - Added missing export section in documentation.
+
 0.07 2004/02/29
  - median() takes an array instead of an arrayref.
 
