@@ -6,5 +6,4 @@ requires:
     Exporter: 0 
 distribution_type: module
 license: perl
-dist_abstract: median finding algorithm.
-dist_author: Steven Schubiger
+dist_abstract: Median finding algorithm

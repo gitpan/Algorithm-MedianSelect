@@ -1,7 +1,7 @@
 Algorithm::MedianSelect
 =======================
 
-Median finding algorithm.
+Median finding algorithm
 
 INSTALLATION
 
@@ -16,7 +16,7 @@ SCRIPTS
 
 bin/median.pl
 
-Interface to Algorithm::MedianSelect that outputs medians.
+Outputs medians.
 
 LICENSE
 
