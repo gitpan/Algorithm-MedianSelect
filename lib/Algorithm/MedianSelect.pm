@@ -1,6 +1,6 @@
 package Algorithm::MedianSelect;
 
-$VERSION = '0.09';
+$VERSION = '0.11';
 @EXPORT_OK = qw(median);
 
 use strict 'vars';
