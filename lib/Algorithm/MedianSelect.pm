@@ -1,4 +1,4 @@
-# $Id: MedianSelect.pm,v 0.02 2004/01/22 10:52:42 sts Exp $
+# $Id: MedianSelect.pm,v 0.03 2004/01/22 10:52:42 sts Exp $
 
 package Algorithm::MedianSelect;
 
@@ -7,7 +7,7 @@ use base qw(Exporter);
 use strict 'vars';
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 our @EXPORT_OK = qw(median);
 
@@ -17,20 +17,21 @@ sub croak {
 }
 
 sub median {
-    my $items = $_[0];
-    croak q~usage: median(\@items)~ unless @$items;
+    my $items = shift;
+    croak q~Usage: median(\@items)~ unless @$items;
     
     my $grep = $$items[0] =~ /\d/ 
       ? grep /\d/,     @$items
       : grep /[a-z]/i, @$items;
-    croak q~mixed types aren't supported~ if $grep != @$items;    
+    croak q~Mixed types aren't supported~ if $grep != @$items;    
     
     my $mode = $$items[0] =~ /\d/ ? 'num' : 'char';
     
-    croak q~need odd number of elements~ 
+    croak q~Need odd number of elements~ 
       if $mode eq 'char' && @$items % 2 == 0;
-    
+      
     my $i = @$items / 2;
+    
     if ($mode eq 'num' && length $i == 1) {
         my @medians = (_sort_num($items))[($i-1,$i)];
 	return ($medians[0] + (($medians[1] - $medians[0]) / 2));
@@ -39,13 +40,13 @@ sub median {
 }
 
 sub _sort_num { 
-    my $items = $_[0];
+    my $items = shift;
 
-    return sort {$a <=> $b} @$items;
+    return sort { $a <=> $b } @$items;
 }
 
 sub _sort_char {
-    my $items = $_[0];
+    my $items = shift;
 
     my %length;
     for (@$items) { $length{$_} = length }
