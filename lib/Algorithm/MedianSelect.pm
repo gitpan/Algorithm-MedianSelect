@@ -1,4 +1,4 @@
-# $Id: MedianSelect.pm,v 0.03 2004/01/22 10:52:42 sts Exp $
+# $Id: MedianSelect.pm,v 0.04 2004/01/22 10:52:42 sts Exp $
 
 package Algorithm::MedianSelect;
 
@@ -7,7 +7,7 @@ use base qw(Exporter);
 use strict 'vars';
 use warnings;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 our @EXPORT_OK = qw(median);
 
@@ -86,6 +86,6 @@ Returns the median item.
 
 =head1 SEE ALSO
 
-http://www.cs.sunysb.edu/~algorith/files/median.shtml
+L<http://www.cs.sunysb.edu/~algorith/files/median.shtml>
 
 =cut
